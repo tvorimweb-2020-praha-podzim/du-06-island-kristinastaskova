@@ -5,6 +5,7 @@ html { box-sizing: border-box;
 body {
     display: flex;
     flex-direction: column;
+    max-width: 1400px;
     margin: 0 auto;
     background-color: #f5f5f5;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -14,7 +15,7 @@ body {
     line-height: 1.5;
 }
 header {
-    background-image: url(images/island-hlavicka.jpg);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.164) ), url(images/island-hlavicka.jpg);
     background-position: center;
     background-size: cover;
     color: #f5f5f5;
@@ -91,25 +92,19 @@ h2::after {
 p {
     margin: 1rem;
 }
-p.popisek {
-    font-size: 12px;
-}
-
-figcaption.popisek {
-    font-size: 12px;
-}
 
 img {
     width: 100%;
 }
 
-#fotogalerie figure {
+.fotogalerie figure {
     margin: 0 0 2rem 0;
 }
 
 .popisek {
     color: grey;
     text-align: center;
+    font-size: 12px;
 }
 
 .popisek a {
@@ -142,18 +137,18 @@ footer a {
         flex: 1;
     }
 
-    #fotogalerie {
+    .fotogalerie {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-content: stretch;
     }
 
-    #fotogalerie h2 {
+    .fotogalerie h2 {
         flex-basis: 100%;
     }
 
-    #fotogalerie figure {
+    .fotogalerie figure {
         width: auto;
         margin: 0;
         flex: 0 50%;
@@ -161,16 +156,16 @@ footer a {
         overflow: hidden;
     }
 
-    #fotogalerie figure img {
+    .fotogalerie-img {
         display: block;
         transition: transform 1s;
     }
 
-    #fotogalerie figure:hover img {
+    .fotogalerie-img:hover{
         transform: scale(1.2);
     }
 
-    #fotogalerie figure figcaption {
+    .fotogalerie figure figcaption {
         position: absolute;
         color: #f5f5f5;
         bottom: 0;
@@ -182,11 +177,11 @@ footer a {
         transition: height 1s ease-out;
     }
 
-    #fotogalerie figure:hover figcaption {
+    .fotogalerie figure:hover figcaption {
         height: calc(100%/3);
         }
 
-    #fotogalerie figure:hover figcaption a {
+    .fotogalerie figure:hover figcaption a {
         color: #f5f5f5;
     }
 
@@ -194,7 +189,7 @@ footer a {
         position: relative;
     }
 
-    section div .popisek {
+    .popisek {
         position: absolute;
         color: #f5f5f5;
         bottom: 1rem;
@@ -217,26 +212,26 @@ section div .popisek a{
         top: -3rem;
     }
 
-    #uvod p {
+    .uvod p {
         padding-left: 20rem ;
     }
 
-    #duvod p {
+    .duvod p {
         padding-right: 20rem;
     }
-    #duvod p.popisek {
+    .duvod p.popisek {
         padding-right: 0;
     }
 
-    #nutnost p,
-    #nutnost h2 {
+    .nutnost p,
+    .nutnost h2 {
         padding-left: 20rem ;
     }
-    #nutnost h2::after {
+    .nutnost h2::after {
         left: 19rem;
     }
 
-    #fotogalerie figure {
+    .fotogalerie figure {
         flex: 0 calc(100%/3);
     }
 
